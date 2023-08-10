@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ca42086-be80-411c-b0cd-4de9ccaf734f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ryctabo/retroscreen/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ryctabo/retroscreen/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ryctabo/retroscreen/NewFigureUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ryctabo/retroscreen/commands/typeof/NewFigureCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ryctabo/retroscreen/UseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ryctabo/retroscreen/commands/Command.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +35,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -81,6 +75,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/com/ryctabo/retroscreen/commands/utils" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.ryctabo.retroscreen.model" />
+      <recent name="com.ryctabo.retroscreen.commands.typeof" />
+      <recent name="com.ryctabo.retroscreen.commands" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="retroscreen [10,5]" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="com.ryctabo.retroscreen.MainKt" />
@@ -101,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691614207459</updated>
       <workItem from="1691614208443" duration="1742000" />
-      <workItem from="1691615956607" duration="4780000" />
+      <workItem from="1691615956607" duration="11752000" />
     </task>
     <servers />
   </component>

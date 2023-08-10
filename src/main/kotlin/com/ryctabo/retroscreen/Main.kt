@@ -1,5 +1,10 @@
 package com.ryctabo.retroscreen
 
+import com.ryctabo.retroscreen.commands.CommandFactory
+import com.ryctabo.retroscreen.commands.CommandResult
+import com.ryctabo.retroscreen.commands.CommandString
+import com.ryctabo.retroscreen.model.RetroScreen
+
 fun main(args: Array<String>) {
     require(args.size == 2) {
         "Must provide two parameters to run retroscreen program"
@@ -13,63 +18,12 @@ fun main(args: Array<String>) {
 
     do {
         retroScreen.printScreen()
-        val command = readln()
-        CommandManager.execute(command, retroScreen)
-    } while (command != "exit")
+        val result = runCatching {
+            CommandFactory.create(
+                CommandString(readln())
+            )(retroScreen)
+        }.onFailure { ex ->
+            println("ERROR: ${ex.message}")
+        }.getOrThrow()
+    } while (result != CommandResult.EXIT)
 }
-
-class RetroScreen(private val x: UInt, private val y: UInt) {
-    val figures = mutableListOf<Figure>()
-    fun printScreen() {
-        for (positionY in 0..<y.toInt()) {
-            for (positionX in 0..<x.toInt()) {
-                val symbol = figures.lastOrNull { fig ->
-                    fig.any { (x, y, _) -> x == positionX && y == positionY }
-                }?.first()?.third
-
-                print(symbol?.let { "$it " } ?: "_ ")
-            }
-            println()
-        }
-    }
-}
-
-typealias Figure = MutableList<Triple<Int, Int, String>>
-
-object CommandManager {
-    fun execute(command: String, retroScreen: RetroScreen) {
-        when (extractCommand(command)) {
-            "new" -> {
-                val args = extractArguments(command)
-                val symbol = args[1]
-                val x = args[2].toInt()
-                val y = args[3].toInt()
-                val width = args[4].toInt()
-                val height = args[5].toInt()
-
-                NewFigureUseCase(symbol, x, y, width, height)
-            }
-
-            "delete" -> {
-                println("Executing command delete")
-            }
-
-            "move" -> {
-                println("Executing command move")
-            }
-
-            "combine" -> {
-                println("Executing command combine")
-            }
-
-            "delete_rect" -> {
-                println("Executing command delete_rect")
-            }
-        }
-    }
-
-}
-
-private fun extractCommand(command: String) = command.split(" ")[0]
-
-private fun extractArguments(command: String) = command.split(" ")
